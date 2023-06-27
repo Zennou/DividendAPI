@@ -7,7 +7,7 @@ import json
 import timeit
 
 
-def get_dividendJSON(symbol):
+def get_dividend_json(symbol):
     options = webdriver.FirefoxOptions()
     options.add_argument('--headless')
 
@@ -26,7 +26,9 @@ def get_dividendJSON(symbol):
     frequency = driver.find_element(
         By.XPATH, '//*[@id="content"]/div[2]/div/div[3]/div/div/section[3]/div/div[2]/div/div[6]/div[2]').text
     driver.quit()
-    return json.dumps({'Price': float(price), 'Dividend Amount': float(dividend), 'Dividend Frequency': frequency})
+    dividend_json = json.dumps({'Price': float(price), 'Dividend Amount': float(
+        dividend), 'Dividend Frequency': frequency})
+    return dividend_json
 
 
 """

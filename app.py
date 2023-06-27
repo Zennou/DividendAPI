@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/dividend/<ticker>')
 def dividend_JSON(ticker):
-    return div.get_dividendJSON(ticker)
+    return div.get_dividend_json(ticker)
 
 
 if __name__ == '__main__':
