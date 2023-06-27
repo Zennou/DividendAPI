@@ -1,2 +1,2 @@
-selenium==4.11.0
+selenium
 Flask==2.3.2
